@@ -25,6 +25,8 @@ public class GameController : MonoBehaviour
 
     public void FinishGame(bool isWin)
     {
+        isFinishGame = true;
+
         if (isWin)
         {
             UIController.instance.windowWinGame.Init(TimeController.instance.StopTimer());
@@ -33,6 +35,14 @@ public class GameController : MonoBehaviour
         {
             UIController.instance.windowLoseGame.SetActive(true);
         }
+    }
+
+    public void AddTime()
+    {
+        isFinishGame = false;
+
+        UIController.instance.windowLoseGame.SetActive(false);
+        TimeController.instance.AddTimeToTimer();
     }
 
     public void Restart()

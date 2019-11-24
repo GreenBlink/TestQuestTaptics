@@ -8,6 +8,7 @@ public class TimeController : MonoBehaviour
 
     public static TimeController instance;
 
+    public int addTime;
     public int maxTime;
 
     private void Awake()
@@ -23,6 +24,12 @@ public class TimeController : MonoBehaviour
         StartCoroutine(TimeProcess());
     }
 
+    public void AddTimeToTimer()
+    {
+        currentTime = addTime;
+        StartCoroutine(TimeProcess());
+    }
+
     public int StopTimer()
     {
         StopAllCoroutines();
@@ -31,7 +38,7 @@ public class TimeController : MonoBehaviour
 
     private IEnumerator TimeProcess()
     {
-        float time = maxTime; 
+        float time = currentTime; 
 
         while (currentTime > 0)
         {

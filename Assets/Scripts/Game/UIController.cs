@@ -17,6 +17,7 @@ public class UIController : MonoBehaviour
     public PushDamage pushDamage;
     public Transform container;
     public Text waveText;
+    public Text errorText;
 
     private void Awake()
     {

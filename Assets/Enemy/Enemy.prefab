@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95162068420855182}
-  stepHP: 10
+  stepHP: 50
   damage: 10
 --- !u!61 &2431089911211090432
 BoxCollider2D:
