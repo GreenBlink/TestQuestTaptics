@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 {
     public static GameController instance;
 
+    public bool isFinishGame;
+
     private void Awake()
     {
         instance = this;
@@ -14,6 +16,8 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
+        isFinishGame = false;
+
         EnemesController.instance.Init();
         TimeController.instance.Init();
         Network.instance.GetPlayers();

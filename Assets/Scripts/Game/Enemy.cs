@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (hp > 0)
+        if (hp > 0 && !GameController.instance.isFinishGame)
             Damage();
     }
 
