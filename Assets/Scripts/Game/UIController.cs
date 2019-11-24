@@ -12,6 +12,8 @@ public class UIController : MonoBehaviour
 
     public CircleSlider hpEnemySlider;
     public CircleSlider timeSlider;
+    public GameObject windowLoseGame;
+    public WindowWinGame windowWinGame;
     public PushDamage pushDamage;
     public Transform container;
     public Text waveText;

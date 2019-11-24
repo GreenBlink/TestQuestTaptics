@@ -23,6 +23,12 @@ public class TimeController : MonoBehaviour
         StartCoroutine(TimeProcess());
     }
 
+    public int StopTimer()
+    {
+        StopAllCoroutines();
+        return maxTime - currentTime;
+    }
+
     private IEnumerator TimeProcess()
     {
         float time = maxTime; 
